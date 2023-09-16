@@ -7,14 +7,10 @@
  */
 export function NxWelcome() {
   return (
-    <div className="flex flex-col bg-blue-light p-4">
-      <h1 className="text-title-1 font-black text-blue-dark">title</h1>
-      <h1 className="text-title-2 font-extrabold text-blue-highlight">
-        Subtitle 101
-      </h1>
-      <p className="text-text font-semibold text-dark">
-        Welcome to nx-react-starter!
-      </p>
+    <div className="flex flex-col bg-blue-light dark:bg-blue-dark p-4 text-blue-dark dark:text-blue-light">
+      <h1 className="text-title-1 font-black">title</h1>
+      <h1 className="text-title-2 font-extrabold">Subtitle 101</h1>
+      <p className="text-text font-semibold ">Welcome to nx-react-starter!</p>
     </div>
   );
 }
