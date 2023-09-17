@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import clsx from 'clsx';
-
-type Color = 'pink' | 'blue' | 'green';
+import { Color } from 'src/types/color';
 
 type BadgeProps = {
   label?: string;
