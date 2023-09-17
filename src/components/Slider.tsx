@@ -78,7 +78,7 @@ export const Slider: React.FC<SliderProps> = ({
         </RadixSlider.Track>
         <RadixSlider.Thumb
           className={clsx(
-            'block w-6 h-6 shadow rounded-full z-10 bg-light focus:outline-none'
+            'block w-6 h-6 shadow rounded-full z-10 bg-light focus:outline-none cursor-pointer'
           )}
           style={{
             boxShadow: '2px 2px 4px 0px rgba(0, 0, 0, 0.15)',
