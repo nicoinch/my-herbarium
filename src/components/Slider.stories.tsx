@@ -26,6 +26,8 @@ export const Basic: StoryObj<typeof Slider> = {
     color: 'pink',
     startIcon: <SunIcon crossedOut />,
     endIcon: <SunIcon />,
+    label: 'Slider',
+    value: 70,
   },
 };
 
@@ -38,18 +40,21 @@ export const VariantColor: StoryObj<typeof Slider> = {
         endIcon={<DropletIcon />}
         label="Pink"
         color="pink"
+        value={70}
       />
       <Slider
         startIcon={<DropletIcon crossedOut />}
         endIcon={<DropletIcon />}
         label="Blue"
         color="blue"
+        value={70}
       />
       <Slider
         startIcon={<DropletIcon crossedOut />}
         endIcon={<DropletIcon />}
         label="Green"
         color="green"
+        value={70}
       />
     </div>
   ),
