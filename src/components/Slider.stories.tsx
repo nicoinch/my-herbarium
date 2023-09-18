@@ -6,7 +6,7 @@ import { DropletIcon } from './icons/Droplet';
 
 const Story: Meta<typeof Slider> = {
   component: Slider,
-  title: 'Slider',
+  title: 'Components/⚛️ Slider',
   decorators: [
     (Story) => (
       <div className="p-4 flex flex-col gap-3">

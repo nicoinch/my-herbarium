@@ -3,7 +3,7 @@ import { App } from './app';
 
 const Story: Meta<typeof App> = {
   component: App,
-  title: 'App',
+  title: 'App/📄 App',
 };
 export default Story;
 
