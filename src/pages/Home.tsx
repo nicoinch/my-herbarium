@@ -57,7 +57,7 @@ export const Home: React.FC<HomeProps> = ({ title, flowers }) => {
           temperature={flower.temperature}
           humidity={flower.humidity}
           description={flower.description}
-          backgroundUrl={`./img/${flower.name.toLowerCase()}.png`}
+          backgroundUrl={`/img/${flower.name.toLowerCase()}.png`}
           lightValue={flower.lightValue}
           onLightChange={handleLightChange(flower.id)}
           waterValue={flower.waterValue}

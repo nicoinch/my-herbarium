@@ -31,7 +31,7 @@ export const Basic: StoryObj<typeof FlowerCard> = {
     humidity: 10.3,
     description:
       'Gerbera is a genus of plants in the Asteraceae (Compositae) family. Gerbera species are tufted, caulescent, perennial herbs, often with woolly crown, up to 80 cm high.',
-    backgroundUrl: './img/gerbera.png',
+    backgroundUrl: '/img/gerbera.png',
   },
 };
 
@@ -45,7 +45,7 @@ export const VariantColor: StoryObj<typeof FlowerCard> = {
         temperature={12.3}
         humidity={10.3}
         description="Tulips (Tulipa) are a genus of spring-blooming perennial herbaceous bulbiferous geophytes. The flowers are usually large, showy and brightly colored, generally red, pink, yellow, or white."
-        backgroundUrl="./img/tulip.png"
+        backgroundUrl="/img/tulip.png"
         lightValue={23}
         waterValue={39}
       />
@@ -55,7 +55,7 @@ export const VariantColor: StoryObj<typeof FlowerCard> = {
         temperature={12.3}
         humidity={10.3}
         description="Gerbera is a genus of plants in the Asteraceae (Compositae) family. Gerbera species are tufted, caulescent, perennial herbs, often with woolly crown, up to 80 cm high."
-        backgroundUrl="./img/gerbera.png"
+        backgroundUrl="/img/gerbera.png"
         lightValue={63}
         waterValue={79}
       />
@@ -65,7 +65,7 @@ export const VariantColor: StoryObj<typeof FlowerCard> = {
         temperature={12.3}
         humidity={10.3}
         description="Zinnias are annuals which flower officially in summer, but with the number of cultivars available you're covered for spring into autumn."
-        backgroundUrl="./img/zinnia.png"
+        backgroundUrl="/img/zinnia.png"
         lightValue={16}
         waterValue={87}
       />
@@ -83,7 +83,7 @@ export const StateOpen: StoryObj<typeof FlowerCard> = {
         temperature={12.3}
         humidity={10.3}
         description="Tulips (Tulipa) are a genus of spring-blooming perennial herbaceous bulbiferous geophytes. The flowers are usually large, showy and brightly colored, generally red, pink, yellow, or white."
-        backgroundUrl="./img/tulip.png"
+        backgroundUrl="/img/tulip.png"
         lightValue={23}
         waterValue={39}
       />
@@ -92,7 +92,7 @@ export const StateOpen: StoryObj<typeof FlowerCard> = {
         title="Tulip"
         temperature={12.3}
         humidity={10.3}
-        backgroundUrl="./img/tulip.png"
+        backgroundUrl="/img/tulip.png"
         lightValue={23}
         waterValue={39}
         open
@@ -103,7 +103,7 @@ export const StateOpen: StoryObj<typeof FlowerCard> = {
         temperature={12.3}
         humidity={10.3}
         description="Tulips (Tulipa) are a genus of spring-blooming perennial herbaceous bulbiferous geophytes. The flowers are usually large, showy and brightly colored, generally red, pink, yellow, or white."
-        backgroundUrl="./img/tulip.png"
+        backgroundUrl="/img/tulip.png"
         lightValue={23}
         waterValue={39}
         open
