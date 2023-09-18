@@ -2,7 +2,7 @@ import React from 'react';
 import { Flower } from 'src/types/flower';
 import { FlowerCard } from 'src/components/FlowerCard';
 
-type HomeProps = {
+export type HomeProps = {
   title?: string;
   flowers: Array<Flower>;
 };
@@ -45,7 +45,7 @@ export const Home: React.FC<HomeProps> = ({ title, flowers }) => {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 w-full pb-10">
       <h1 className="text-title-1 font-black pt-[104px] text-dark dark:text-light">
         {title}
       </h1>
