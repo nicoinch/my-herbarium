@@ -124,13 +124,13 @@ export const MyDarkWithDescription: StoryObj<typeof Home> = {
 };
 
 export const MyLightWithoutDescription: StoryObj<typeof Home> = {
-  name: '🧑‍🔬 My Herbarium light with description',
+  name: '🧑‍🔬 My Herbarium light without description',
   args: argsFactory({ withDescription: false }),
   decorators: [lightDecorator],
 };
 
 export const MyDarkWithoutDescription: StoryObj<typeof Home> = {
-  name: '🧑‍🔬 My Herbarium dark with description',
+  name: '🧑‍🔬 My Herbarium dark without description',
   args: argsFactory({ withDescription: false }),
   decorators: [darkDecorator],
 };
@@ -148,13 +148,13 @@ export const YourDarkWithDescription: StoryObj<typeof Home> = {
 };
 
 export const YourLightWithoutDescription: StoryObj<typeof Home> = {
-  name: '🧑‍🔬 Your Herbarium light with description',
+  name: '🧑‍🔬 Your Herbarium light without description',
   args: argsFactory({ withDescription: false, title: 'Your Herbarium' }),
   decorators: [lightDecorator],
 };
 
 export const YourDarkWithoutDescription: StoryObj<typeof Home> = {
-  name: '🧑‍🔬 Your Herbarium dark with description',
+  name: '🧑‍🔬 Your Herbarium dark without description',
   args: argsFactory({ withDescription: false, title: 'Your Herbarium' }),
   decorators: [darkDecorator],
 };
