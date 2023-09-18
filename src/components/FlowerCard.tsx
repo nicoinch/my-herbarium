@@ -18,6 +18,8 @@ type FlowerCardProps = {
   backgroundUrl?: string;
   lightValue?: number;
   waterValue?: number;
+  onLightChange?: (value: Array<number>) => void;
+  onWaterChange?: (value: Array<number>) => void;
 };
 
 export const FlowerCard: React.FC<FlowerCardProps> = ({
@@ -30,6 +32,8 @@ export const FlowerCard: React.FC<FlowerCardProps> = ({
   backgroundUrl,
   lightValue,
   waterValue,
+  onLightChange,
+  onWaterChange,
 }) => {
   const [openState, setOpenState] = React.useState(open);
   const classes = [];
@@ -98,6 +102,7 @@ export const FlowerCard: React.FC<FlowerCardProps> = ({
               label="Light"
               color={color}
               value={lightValue}
+              onChange={onLightChange}
             />
             <Slider
               startIcon={<DropletIcon crossedOut />}
@@ -105,6 +110,7 @@ export const FlowerCard: React.FC<FlowerCardProps> = ({
               label="Water"
               color={color}
               value={waterValue}
+              onChange={onWaterChange}
             />
           </div>
         </div>

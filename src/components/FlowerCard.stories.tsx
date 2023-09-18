@@ -13,6 +13,11 @@ const Story: Meta<typeof FlowerCard> = {
     ),
     darkModeDecorator,
   ],
+
+  argTypes: {
+    onLightChange: { action: 'Light changed' },
+    onWaterChange: { action: 'Water changed' },
+  },
 };
 
 export default Story;

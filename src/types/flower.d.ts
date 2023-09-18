@@ -7,4 +7,6 @@ export type Flower = {
   temperature: number;
   humidity: number;
   description?: string;
+  lightValue?: number;
+  waterValue?: number;
 };

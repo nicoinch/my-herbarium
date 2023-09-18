@@ -30,6 +30,8 @@ export const Basic: StoryObj<typeof Home> = {
         humidity: 33,
         description:
           'Tulips (Tulipa) are a genus of spring-blooming perennial herbaceous bulbiferous geophytes. The flowers are usually large, showy and brightly colored, generally red, pink, yellow, or white.',
+        lightValue: 12,
+        waterValue: 15,
       },
       {
         id: '9ad170f59c13b9cc9f354a4f6fc7ded3df6409e9',
@@ -39,6 +41,8 @@ export const Basic: StoryObj<typeof Home> = {
         humidity: 32.5,
         description:
           'Gerbera is a genus of plants in the Asteraceae (Compositae) family. Gerbera species are tufted, caulescent, perennial herbs, often with woolly crown, up to 80 cm high.',
+        lightValue: 12,
+        waterValue: 15,
       },
       {
         id: 'c0458e3064a7da61b9e97ba0c7c2fbb19cb9984b',
@@ -48,6 +52,8 @@ export const Basic: StoryObj<typeof Home> = {
         humidity: 83,
         description:
           'Orchids is a genus of plants, that are easily distinguished from other plants, as they share some very evident derived characteristics or synapomorphies.',
+        lightValue: 12,
+        waterValue: 15,
       },
       {
         id: 'a00a9516d5990b2a3bc0d650adfa6a2661dd10fe123xc',
@@ -57,6 +63,8 @@ export const Basic: StoryObj<typeof Home> = {
         humidity: 45.11,
         description:
           'Chrysanthemums are flowering plants of the genus Chrysanthemum in the family Asteraceae. They are native to East Asia and northeastern Europe and the center of diversity is in China.',
+        lightValue: 12,
+        waterValue: 15,
       },
       {
         id: 'd793dc12cb58062cc2a64d438d541dc8ad4daa95',
@@ -66,6 +74,8 @@ export const Basic: StoryObj<typeof Home> = {
         humidity: 39.5,
         description:
           "Zinnias are annuals which flower officially in summer, but with the number of cultivars available you're covered for spring into autumn.",
+        lightValue: 12,
+        waterValue: 15,
       },
     ],
   },
