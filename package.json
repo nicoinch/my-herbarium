@@ -9,6 +9,7 @@
   },
   "private": true,
   "dependencies": {
+    "@radix-ui/react-popover": "^1.0.6",
     "@radix-ui/react-slider": "^1.1.2",
     "@swc/helpers": "~0.5.0",
     "clsx": "^2.0.0",
