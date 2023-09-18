@@ -61,11 +61,11 @@ export const FlowerCard: React.FC<FlowerCardProps> = ({
   }
 
   // List flowers background images to force tailwind detect them
-  // bg-[url('./img/chrysanthemum.png')]
-  // bg-[url('./img/gerbera.png')]
-  // bg-[url('./img/orchid.png')]
-  // bg-[url('./img/tulip.png')]
-  // bg-[url('./img/zinnia.png')]
+  // bg-[url('/img/chrysanthemum.png')]
+  // bg-[url('/img/gerbera.png')]
+  // bg-[url('/img/orchid.png')]
+  // bg-[url('/img/tulip.png')]
+  // bg-[url('/img/zinnia.png')]
   return (
     <div className={clsx(`rounded-2xl overflow-hidden`, ...classes)}>
       <div

@@ -31,3 +31,11 @@ npx nx run my-herbarium:serve --configuration=development
 ```
 
 Open your browser and navigate to http://localhost:4200/.
+
+## Deploy on Chromatic
+
+You need the Chromatic project token to deploy Storybook.
+
+```
+npx chromatic --project-token=XXXXX
+```
