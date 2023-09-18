@@ -6,7 +6,7 @@ import { HumidityIcon } from './icons/Humidity';
 
 const Story: Meta<typeof Badge> = {
   component: Badge,
-  title: 'Badge',
+  title: 'Components/⚛️ Badge',
   decorators: [
     (Story) => (
       <div className="p-4 flex flex-col gap-3">

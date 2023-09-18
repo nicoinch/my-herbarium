@@ -11,13 +11,15 @@ import { SunIcon } from './icons/Sun';
 type FlowerCardProps = {
   open?: boolean;
   title: string;
-  temperature: string;
-  humidity: string;
-  description: string;
+  temperature: number;
+  humidity: number;
+  description?: string;
   color?: Color;
   backgroundUrl?: string;
   lightValue?: number;
   waterValue?: number;
+  onLightChange?: (value: Array<number>) => void;
+  onWaterChange?: (value: Array<number>) => void;
 };
 
 export const FlowerCard: React.FC<FlowerCardProps> = ({
@@ -30,6 +32,8 @@ export const FlowerCard: React.FC<FlowerCardProps> = ({
   backgroundUrl,
   lightValue,
   waterValue,
+  onLightChange,
+  onWaterChange,
 }) => {
   const [openState, setOpenState] = React.useState(open);
   const classes = [];
@@ -70,14 +74,18 @@ export const FlowerCard: React.FC<FlowerCardProps> = ({
           setOpenState(!openState);
         }}
       >
-        <div className="text-title-2 font-semibold">{title}</div>
+        <div className="text-title-2 font-extrabold">{title}</div>
         <div className="flex gap-1">
           <Badge
-            label={temperature + '°C'}
+            label={temperature.toFixed(1) + '°C'}
             icon={<ThermometerIcon />}
             color={color}
           />
-          <Badge label={humidity + '%'} icon={<HumidityIcon />} color={color} />
+          <Badge
+            label={humidity.toFixed(1) + '%'}
+            icon={<HumidityIcon />}
+            color={color}
+          />
         </div>
       </div>
       {openState ? (
@@ -87,13 +95,14 @@ export const FlowerCard: React.FC<FlowerCardProps> = ({
               <div className="text-text">{description}</div>
             </div>
           ) : null}
-          <div className="flex flex-col gap-2 px-3 py-4">
+          <div className="flex flex-col gap-2 px-3 py-4 bg-white bg-opacity-20">
             <Slider
               startIcon={<SunIcon crossedOut />}
               endIcon={<SunIcon />}
               label="Light"
               color={color}
               value={lightValue}
+              onChange={onLightChange}
             />
             <Slider
               startIcon={<DropletIcon crossedOut />}
@@ -101,6 +110,7 @@ export const FlowerCard: React.FC<FlowerCardProps> = ({
               label="Water"
               color={color}
               value={waterValue}
+              onChange={onWaterChange}
             />
           </div>
         </div>

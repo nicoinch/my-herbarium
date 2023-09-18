@@ -37,7 +37,7 @@ module.exports = {
       },
       fontSize: {
         'title-1': ['40px', '64px'],
-        'title-2': ['18px', 'auto'],
+        'title-2': ['28px', 'auto'],
         text: ['14px', 'auto'],
       },
     },
