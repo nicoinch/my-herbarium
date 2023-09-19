@@ -59,6 +59,14 @@ export const Slider: React.FC<SliderProps> = ({
         'dark:stroke-light dark:fill-light'
       );
       break;
+    case 'yellow':
+      classesTrack.push('bg-yellow-dark', 'dark:bg-light');
+      classesRange.push('bg-yellow-highlight');
+      classesIcon.push(
+        'stroke-yellow-dark fill-yellow-dark',
+        'dark:stroke-light dark:fill-light'
+      );
+      break;
   }
 
   const handleMouseEnter = () => {

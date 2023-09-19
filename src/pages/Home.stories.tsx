@@ -36,7 +36,7 @@ export const Basic: StoryObj<typeof Home> = {
       {
         id: '9ad170f59c13b9cc9f354a4f6fc7ded3df6409e9',
         name: 'Gerbera',
-        color: 'blue',
+        color: 'green',
         temperature: 23.6666667,
         humidity: 32.5,
         description:
@@ -47,7 +47,7 @@ export const Basic: StoryObj<typeof Home> = {
       {
         id: 'c0458e3064a7da61b9e97ba0c7c2fbb19cb9984b',
         name: 'Orchid',
-        color: 'green',
+        color: 'blue',
         temperature: 31.1,
         humidity: 83,
         description:
@@ -74,6 +74,17 @@ export const Basic: StoryObj<typeof Home> = {
         humidity: 39.5,
         description:
           "Zinnias are annuals which flower officially in summer, but with the number of cultivars available you're covered for spring into autumn.",
+        lightValue: 12,
+        waterValue: 15,
+      },
+      {
+        id: 'duf69eda0kcvuz8dz8a64d438d541dc8ad4daa95',
+        name: 'Red Viburnum',
+        color: 'yellow',
+        temperature: 23,
+        humidity: 43.9,
+        description:
+          'Red Viburnum (Viburnum dentatum) is a member of the Adoxaceae family. This deciduous shrub is found in natural habitats in Eurasia, and some regions in North Africa.',
         lightValue: 12,
         waterValue: 15,
       },

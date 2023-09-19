@@ -47,6 +47,12 @@ export const Badge: React.FC<BadgeProps> = ({
         'dark:bg-green-medium dark:text-green-light dark:stroke-green-light dark:fill-green-light'
       );
       break;
+    case 'yellow':
+      classes.push(
+        'bg-yellow-dark-10 text-yellow-dark stroke-yellow-dark fill-yellow-dark',
+        'dark:bg-yellow-medium dark:text-yellow-light dark:stroke-yellow-light dark:fill-yellow-light'
+      );
+      break;
   }
 
   return (

@@ -31,6 +31,11 @@ module.exports = {
         'green-medium': '#4d5420',
         'green-light': '#d4e99c',
         'green-highlight': '#97c910',
+        'yellow-dark': '#413407',
+        'yellow-dark-10': '#e8d677',
+        'yellow-medium': '#544c20',
+        'yellow-light': '#fcf3a8',
+        'yellow-highlight': '#FFD600',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
