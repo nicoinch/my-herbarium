@@ -103,14 +103,17 @@ export const Slider: React.FC<SliderProps> = ({
           }}
           aria-label={label}
           onMouseEnter={handleMouseEnter}
+          onTouchStart={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
+          onTouchEnd={handleMouseLeave}
         >
           <RadixPopover.Root open={popoverOpen}>
-            <RadixPopover.Trigger></RadixPopover.Trigger>
+            <RadixPopover.Trigger className="opacity-0"></RadixPopover.Trigger>
             <RadixPopover.Content
               className="w-10 bg-white text-dark focus:outline-none shadow rounded-md p-2 translate-x-3"
               side="top"
               sideOffset={20}
+              avoidCollisions={false}
             >
               <div className="w-full text-text text-center">{sliderValue}</div>
               <RadixPopover.Arrow className="fill-light" />
