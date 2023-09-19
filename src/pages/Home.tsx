@@ -45,7 +45,7 @@ export const Home: React.FC<HomeProps> = ({ title, flowers }) => {
   };
 
   return (
-    <div className="flex flex-col gap-4 w-full pb-10">
+    <div className="flex flex-col gap-4 w-full pb-10 px-4">
       <h1 className="text-title-1 font-black pt-[104px] text-dark dark:text-light">
         {title}
       </h1>
