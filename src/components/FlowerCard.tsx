@@ -37,26 +37,37 @@ export const FlowerCard: React.FC<FlowerCardProps> = ({
 }) => {
   const [openState, setOpenState] = React.useState(open);
   const classes = [];
+  const titleClasses = [];
   const descriptionClasses = [];
 
   switch (color) {
     case 'pink':
       classes.push('bg-pink-light text-pink-dark');
       classes.push('dark:bg-pink-dark dark:text-pink-light');
+      titleClasses.push('bg-pink-light dark:bg-pink-dark rounded-xl');
       descriptionClasses.push('bg-pink-dark text-pink-light');
       descriptionClasses.push('dark:bg-pink-light dark:text-pink-dark');
       break;
     case 'blue':
       classes.push('bg-blue-light text-blue-dark');
       classes.push('dark:bg-blue-dark dark:text-blue-light');
+      titleClasses.push('bg-blue-light dark:bg-blue-dark rounded-xl');
       descriptionClasses.push('bg-blue-dark text-blue-light');
       descriptionClasses.push('dark:bg-blue-light dark:text-blue-dark');
       break;
     case 'green':
       classes.push('bg-green-light text-green-dark');
       classes.push('dark:bg-green-dark dark:text-green-light');
+      titleClasses.push('bg-green-light dark:bg-green-dark rounded-xl');
       descriptionClasses.push('bg-green-dark text-green-light');
       descriptionClasses.push('dark:bg-green-light dark:text-green-dark');
+      break;
+    case 'yellow':
+      classes.push('bg-yellow-light text-yellow-dark');
+      classes.push('dark:bg-yellow-dark dark:text-yellow-light');
+      titleClasses.push('bg-yellow-light dark:bg-yellow-dark rounded-xl');
+      descriptionClasses.push('bg-yellow-dark text-yellow-light');
+      descriptionClasses.push('dark:bg-yellow-light dark:text-yellow-dark');
       break;
   }
 
@@ -66,15 +77,28 @@ export const FlowerCard: React.FC<FlowerCardProps> = ({
   // bg-[url('/img/orchid.png')]
   // bg-[url('/img/tulip.png')]
   // bg-[url('/img/zinnia.png')]
+  // bg-[url('/img/red-viburnum.png')]
   return (
     <div className={clsx(`rounded-2xl overflow-hidden`, ...classes)}>
       <div
-        className={`flex flex-col gap-3 p-6 py-[29px] bg-[url('${backgroundUrl}')] bg-no-repeat bg-right-bottom bg-contain cursor-pointer`}
+        className={`flex flex-col gap-3 p-6 py-[29px] bg-[url('${backgroundUrl?.replace(
+          ' ',
+          '-'
+        )}')] bg-no-repeat bg-right-bottom bg-contain cursor-pointer`}
         onClick={() => {
           setOpenState(!openState);
         }}
       >
-        <div className="text-title-2 font-extrabold">{title}</div>
+        <div className="text-title-2 font-extrabold">
+          <span
+            className={clsx(
+              titleClasses,
+              'bg-opacity-80 dark:bg-opacity-80 pr-2'
+            )}
+          >
+            {title}
+          </span>
+        </div>
         <div className="flex gap-1">
           <Badge
             label={temperature.toFixed(1) + '°C'}
