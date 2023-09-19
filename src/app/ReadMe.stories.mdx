@@ -1,0 +1,429 @@
+import { Meta, Controls } from '@storybook/blocks';
+
+<Meta title="🎉 ReadMe" />
+
+# 🪴 My Herbarium
+
+# 🧭 Context
+
+The **My Herbarium** project is done to address the Preply recruitment exercice. This document is the main docs requested as a deliverable. This document was build using [a Notion site](https://denim-crocus-d10.notion.site/My-Herbarium-a682616c38c244618999e437a327bbf0) (try it for more interactions).
+
+## 🪚 What has been done
+
+- The [Figma file](https://www.figma.com/file/vFCIVv7NPw1IqHBcBBWl6h/My-Herbarium?type=design&node-id=14-1126&mode=design&t=IaRLAeBgdWr2mLuC-0) has been extended with:
+  - The definition of design tokens, one color has been added for convenience.
+  - The specification for `<Badge />`, `<Slider />`, `<FlowerCard />` components and `<Home />` page.
+- Tasks can be found at the end of this document in the Project Management section, they have been defined to address both:
+  - The short term goal: provide a prototype for user tests.
+  - The long term goal: provide a demo application on the Internet (not completely functional yet but usable).
+- The [code](https://github.com/nicoinch/my-herbarium) has been written to satisfy the short term goal only according to the tasks previously defined. Long term guidance can be found in pending tasks.
+
+## 📦 Deliverables
+
+- This markdown file also available as [a Notion site](https://denim-crocus-d10.notion.site/My-Herbarium-a682616c38c244618999e437a327bbf0) (try it for more interactions).
+- A [Figma file](https://www.figma.com/file/vFCIVv7NPw1IqHBcBBWl6h/My-Herbarium?type=design&node-id=14-1126&mode=design&t=IaRLAeBgdWr2mLuC-0) with original designs and some additions.
+- The code implemented both as files in the delivered archive and as [a Github repository](https://github.com/nicoinch/my-herbarium) (useful to see all the dev processes with commits & pull requests).
+- The Storybook deployed on Chromatic with both:
+  - Stories for components and page.
+  - Stories for user tests: Stories have been implemented to satisfy the scenario provided. Variations have been put in place to be able to test the pertinence of the description and the two possible titles (**My Herbarium** & **Your Herbarium**):
+    - <a
+        class="sbdocs sbdocs-a css-ajfpqr"
+        href="/iframe.html?args=&id=user-tests-%F0%9F%9A%B8-home--my-light-with-description&viewMode=story"
+      >🧑‍🔬 My Herbarium light with description</a>
+    - <a
+        class="sbdocs sbdocs-a css-ajfpqr"
+        href="/iframe.html?args=&id=user-tests-%F0%9F%9A%B8-home--my-dark-with-description&viewMode=story"
+      >🧑‍🔬 My Herbarium dark with description</a>
+    - <a
+        class="sbdocs sbdocs-a css-ajfpqr"
+        href="/iframe.html?args=&id=user-tests-%F0%9F%9A%B8-home--my-light-without-description&viewMode=story"
+      >🧑‍🔬 My Herbarium light without description</a>
+    - <a
+        class="sbdocs sbdocs-a css-ajfpqr"
+        href="/iframe.html?args=&id=user-tests-%F0%9F%9A%B8-home--my-dark-without-description&viewMode=story"
+      >🧑‍🔬 My Herbarium dark without description</a>
+    - <a
+        class="sbdocs sbdocs-a css-ajfpqr"
+        href="/iframe.html?args=&id=user-tests-%F0%9F%9A%B8-home--your-light-with-description&viewMode=story"
+      >🧑‍🔬 Your Herbarium light with description</a>
+    - <a
+        class="sbdocs sbdocs-a css-ajfpqr"
+        href="/iframe.html?args=&id=user-tests-%F0%9F%9A%B8-home--your-dark-with-description&viewMode=story"
+      >🧑‍🔬 Your Herbarium dark with description</a>
+    - <a
+        class="sbdocs sbdocs-a css-ajfpqr"
+        href="/iframe.html?args=&id=user-tests-%F0%9F%9A%B8-home--your-light-without-description&viewMode=story"
+      >🧑‍🔬 Your Herbarium light without description</a>
+    - <a
+        class="sbdocs sbdocs-a css-ajfpqr"
+        href="/iframe.html?args=&id=user-tests-%F0%9F%9A%B8-home--your-dark-without-description&viewMode=story"
+      >🧑‍🔬 Your Herbarium dark without description</a>
+    - <a
+        class="sbdocs sbdocs-a css-ajfpqr"
+        href="/iframe.html?args=&id=user-tests-%F0%9F%9A%B8-home--your-dark-without-description&viewMode=story"
+      >🧑‍🔬 Your Herbarium dark without description</a>
+
+# 💼 Project
+
+## **🔭** Project vision
+
+The **My Herbarium** application will allow users to monitor their plants at home via dedicated IOT sensors. Users will be able to add and remove plants, associate temperature and humidity sensors, and adjust each plant’s light and humidity levels.
+
+The application will support dark mode. All the data will be stored in the device, except for the real time data from the herbarium sensors, which will be provided by an API.
+
+## ❓Questions for product owner & design
+
+⚠️ In a real life project, those questions would have been answered ASAP and should have blocked certain tasks. For the sake of the exercise, I tried to provide solutions on my own.
+
+- Wireframes refers to **_Your Herbarium_** when product vision refers to **_My Herbarium_**, which one is correct? _For now, the product vision name has been used, but can be renamed._
+- Layout screenshots and flowers data have a plant description property missing in the Figma file and not mentioned in the user testing scenario. _It has been added to the `<FlowerCard />` component in Figma and implemented but is hidden thanks to a component prop, will be removed once proper behaviour is identified._
+- In the provided data, pictures are missing for Chrysanthemum & Zinnia. _Replaced with pictures found online._
+- Icons for sun, crossed out sun, droplet and crossed out droplet were not provided. _Extracts from the Figma file are used instead._
+- A typo is present on the provided flowers data (`humidty` instead of `humidity`). _Used a fixed version in the code._
+- The `<Slider />` as this presents a usability issue as the current value is not displayed. If the user wants to precisely tune the values, as requested in the usability test, it will be difficult. _A popover has been added when sliding to display the current value._
+
+## 💄 UI Design
+
+[Figma file](https://www.figma.com/file/vFCIVv7NPw1IqHBcBBWl6h/My-Herbarium?type=design&node-id=14-1126&mode=design&t=IaRLAeBgdWr2mLuC-0) with:
+
+- The original provided design .
+- The design tokens.
+- The components `<Badge />`, `<Slider />` and `<FlowerCard/>`.
+- The `<Home />` page.
+
+## **🧑‍💻 Implementation**
+
+The application has been implemented using:
+
+- [React](https://react.dev/)/[Typescript](https://www.typescriptlang.org/) for the web application code,
+- [Tailwind CSS](https://tailwindcss.com/) for styling,
+- [NX](https://nx.dev/) to generate the application and manage tools addition,
+- [RadixUI](https://www.radix-ui.com/) for accessible components,
+- [Storybook](https://storybook.js.org/) as a development workshop,
+- [Chromatic](https://www.chromatic.com/) for visual testing and Storybook deployment,
+- [Github](https://github.com/) to manage sources: ‣.
+
+# 🏭 Project management
+
+The list of tasks has been simplified to be displayable in a markdown file. Use [Notion page](https://denim-crocus-d10.notion.site/My-Herbarium-a682616c38c244618999e437a327bbf0) for better experience.
+
+## 🧰 Init application stack & tooling
+
+### 📝 Description
+
+The aim of this task is to init the application technical stack and tooling.
+
+Technical stack:
+The technical stack is made of:
+
+- React
+- Typescript
+- Tailwind CSS
+
+Minimal required tooling:
+
+- Use NX for workspace management.
+
+### 👷 ToDo
+
+Init the react application with NX. It should have typescript and Tailwind CSS, see NX blog post for more informations.
+
+```
+npx create-nx-workspace my-herbarium --preset=react-standalone
+```
+
+Add storybook to the app, see NX docs:
+
+```
+nx g @nx/react:storybook-configuration project-name
+```
+
+NB: Please do not remove generated files at this step to use them as templates in next steps.
+
+### ✅ Definition of done
+
+- A default application with React/Typescript, Tailwind working.
+- ⚠️ Use the default generated files and a check to confirm Tailwind styles are correctly applied.
+
+### 🆗 Task is done, [link to pull request](https://github.com/nicoinch/my-herbarium/pull/12)
+
+## 🗜️ Add Storybook
+
+### 📝 Description
+
+The aim of this task is to Storybook to the application.
+
+### 👷 ToDo
+
+Add storybook to the app, [see NX docs](https://nx.dev/recipes/storybook/overview-react):
+
+```
+nx g @nx/react:storybook-configuration project-name
+```
+
+NB1: Please do not remove generated files at this step to use them as templates in next steps.
+
+NB2: Do not install Cypress E2E for now.
+
+### ✅ Definition of done
+
+- Storybook running locally with default stories, check Tailwind styles are properly applied.
+
+### 🆗 Task is done, [link to pull request](https://github.com/nicoinch/my-herbarium/pull/13)
+
+## 🎨 Configure design tokens
+
+### 📝 Description
+
+This task will allow to configure Tailwind according to the application design tokens.
+
+[Figma file](https://www.figma.com/file/vFCIVv7NPw1IqHBcBBWl6h/My-Herbarium?type=design&mode=design&t=h5W23giefKalWMwp-0)
+
+### 👷 ToDo
+
+Design tokens extracted from the Figma file:
+
+```
+"colors": {
+      "dark": "#151515",
+      "light": "#ffffff",
+      "pink-dark": "#640227",
+      "pink-dark-10": "#640227",
+      "pink-medium": "#833552",
+      "pink-light": "#f8d9e8",
+      "pink-highlight": "#ff62ae",
+      "blue-dark": "#1f2c2e",
+      "blue-dark-10": "#1f2c2e",
+      "blue-medium": "#354143",
+      "blue-light": "#9cb5ba",
+      "blue-highlight": "#9beeff",
+      "green-dark": "#394107",
+      "green-dark-10": "#394107",
+      "green-medium": "#4d5420",
+      "green-light": "#d4e99c",
+      "green-highlight": "#97c910",
+      "yellow-dark": "#413407",
+      "yellow-dark-10": "#e8d677",
+      "yellow-medium": "#544c20",
+      "yellow-light": "#fcf3a8",
+      "yellow-highlight": "#ffd600"
+},
+fontFamily: {
+      sans: ['Inter', 'sans-serif']
+ },
+fontSize: {
+      title-1: ['40px', '64px'],
+      title-2: ['28px', 'auto'],
+      text: ['14px', 'auto']
+}
+```
+
+NB: Do not forget about dark mode.
+
+### ✅ Definition of done
+
+- A default component generated in the previous step modified to apply Tailwind classes allowing to check colors and text configuration.
+
+### 🆗 Task is done, [link to pull request](https://github.com/nicoinch/my-herbarium/pull/14)
+
+## 🚛 Deploy Storybook on Chromatic
+
+### 📝 Description
+
+This task will allow to deploy Storybook on Chromatic.
+
+### 👷 ToDo
+
+[See Chromatic docs](https://www.chromatic.com/docs/setup/) on how to:
+
+- Install Chromatic in the app dependencies
+- Deploy the app Storybook on Chromatic
+
+[See Chromatic docs on about UI testing](https://www.chromatic.com/docs/test/).
+
+- Push current version to Chromatic.
+- Introduce a change on a component with a story on your branch.
+- Deploy the new version to Chromatic.
+- Check the diff is detected by Chromatic build.
+
+### ✅ Definition of done
+
+- Storybook is available on the Internet.
+- Chromatic properly detects visual changes in component stories.
+
+### 🆗 Task is done, [link to pull request](https://github.com/nicoinch/my-herbarium/pull/20)
+
+## ✨ Add `<Badge />` component
+
+### 📝 Description
+
+This task will allow to add the `<Badge />` component.
+
+[Figma file](https://www.figma.com/file/vFCIVv7NPw1IqHBcBBWl6h/My-Herbarium?type=design&node-id=6-1358&mode=design&t=SvyuSrPfGRzq0sMR-0)
+
+### 👷 ToDo
+
+- Add the `<Badge />` component.
+- Add stories for this component reusing the story format generated.
+
+### ✅ Definition of done
+
+- The component is added to the codebase.
+- Its stories are available in Storybook.
+
+### 🆗 Task is done, [link to pull request](https://github.com/nicoinch/my-herbarium/pull/15)
+
+## 📸 Add snapshots tests to CI
+
+### 📝 Description
+
+This task will add Chromatic checks for the pull request builds and add it as a check for the Github pull request merge guards.
+
+### 👷 ToDo
+
+[See Chromatic docs](https://www.chromatic.com/docs/test/) on about Github action.
+
+- Push current version to Chromatic.
+- Introduce a change on a component with a story on your branch.
+- Deploy the new version to Chromatic.
+- Check the diff is detected by Chromatic build.
+
+### ✅ Definition of done
+
+Chromatic properly detects visual changes in component stories.
+
+### ✴️ Task to do
+
+## ✨ Add `<Slider />` component
+
+### 📝 Description
+
+This task will allow to add the `<Slider />` component.
+
+[Figma file](https://www.figma.com/file/vFCIVv7NPw1IqHBcBBWl6h/My-Herbarium?type=design&node-id=6-1547&mode=design&t=mf0vqmhgKQcGToCV-0)
+
+### 👷 ToDo
+
+- Add the `<Slider />` component based on RadixUI slider component.
+- Add stories for this component reusing the story format generated.
+
+### ✅ Definition of done
+
+- The component is added to the codebase.
+- Its stories are available in Storybook.
+
+### 🆗 Task is done, [link to pull request](https://github.com/nicoinch/my-herbarium/pull/16)
+
+## ✨ Add `<FlowerCard />` component
+
+### 📝 Description
+
+This task will allow to add the `<FlowerCard />` component.
+
+[Figma file](https://www.figma.com/file/vFCIVv7NPw1IqHBcBBWl6h/My-Herbarium?type=design&node-id=9-974&mode=design&t=H2NflCK1mKVANKEc-0)
+
+### 👷 ToDo
+
+- Add the `<FlowerCard />` component.
+- Add stories for this component reusing the story format generated.
+
+### ✅ Definition of done
+
+- The component is added to the codebase.
+- Its stories are available in Storybook.
+
+### 🆗 Task is done, [link to pull request](https://github.com/nicoinch/my-herbarium/pull/17)
+
+## ✨ Add the `<Home />` page
+
+### 📝 Description
+
+This task will allow to add the `<Home />` page.
+
+### 👷 ToDo
+
+Add the `<Home />` page.
+
+[Figma file](https://www.figma.com/file/vFCIVv7NPw1IqHBcBBWl6h/My-Herbarium?type=design&node-id=14-1126&mode=design&t=q34LG6XUrJUPotyo-0)
+
+### ✅ Definition of done
+
+- The component is added to the codebase.
+- Its stories are available in Storybook.
+
+### 🆗 Task is done, [link to pull request](https://github.com/nicoinch/my-herbarium/pull/18)
+
+## 👷 Implement user tests use cases
+
+### 📝 Description
+
+This task will allow to implement the stories needed for the user tests.
+
+### 👷 ToDo
+
+Add the `UserTest` story allowing to:
+
+- Display 5 hardcoded flowers in ascending alphabetical order.
+- Clicking anywhere on a card should expand it and display the adjustment sliders.
+- Clicking anywhere on the top part of an expanded card should collapse it.
+
+### ✅ Definition of done
+
+- The story for user tests is available on the Storybook Deployed on the Web.
+
+### 🆗 Task is done, [link to pull request](https://github.com/nicoinch/my-herbarium/pull/19)
+
+## 🛣️ Init routing
+
+### 📝 Description
+
+This task will add Tanstack router to the application. [See docs](https://tanstack.com/router/v1/docs/overview).
+
+### 👷 ToDo
+
+- Add the router.
+- Configure route for Home page for both `/` and `/home` routes.
+
+### ✅ Definition of done
+
+- The router is working.
+- The Home page is accessible through both its routes `/` and `/home`.
+
+### ✴️ Task to do
+
+## 🔌 Plug APIs
+
+### 📝 Description
+
+This task will add Tanstack query to the application. See docs.
+
+### 👷 ToDo
+
+- Add the data fetching library.
+- Hard code calls to an existing endpoint and display data on the home page.
+- Add a story for the `<App />` component and mock API calls thanks to Mock Service Worker, see Docs.
+
+### ✅ Definition of done
+
+- The data are properly displayed in the Home page when serving the application on local dev.
+- The story is displaying mocked data but using Tanstack query library.
+
+### ✴️ Task to do
+
+## 🏗️ Build and deploy
+
+### 📝 Description
+
+Init the application build and deployment.
+⚠️ The technical solution still needs to be identified according to customer constraints.
+
+### 👷 ToDo
+
+- Ensure the build of the application is working.
+- Init the CI/CD (product to be defines).
+
+### ✅ Definition of done
+
+- The application is build by CI (for now manually triggered) and is properly deployed online.
+
+### ✴️ Task to do
