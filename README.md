@@ -2,6 +2,12 @@
 
 The My Herbarium application will allow users to monitor their plants at home via dedicated IOT sensors. Users will be able to add and remove plants, associate temperature and humidity sensors, and adjust each plant’s light and humidity levels.
 
+## Install dependencies
+
+```
+npm install
+```
+
 ## Running tasks
 
 ### Run tests
